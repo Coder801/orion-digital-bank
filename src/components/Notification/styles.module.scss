@@ -1,0 +1,32 @@
+@use "@/styles/variables.scss" as *;
+
+.notification {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: var(--space-xs);
+  transition: transform 0.2s;
+  color: var(--color-text-primary);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ef4444;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

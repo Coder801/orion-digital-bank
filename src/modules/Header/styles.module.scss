@@ -1,0 +1,17 @@
+@use "@/styles/variables.scss" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-xl);
+  background: rgb(var(--navy));
+  border-bottom: 1px solid rgba(var(--light-gray), 0.1);
+  height: 70px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}

@@ -1,0 +1,61 @@
+@use "@/styles/variables.scss" as *;
+
+.notice {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid;
+  background-color: rgb(var(--white));
+  box-shadow: 0 2px 4px rgba(var(--black), 0.1);
+
+  &.info {
+    border-left-color: #3b82f6;
+
+    .icon {
+      color: #3b82f6;
+    }
+  }
+
+  &.warning {
+    border-left-color: #f59e0b;
+
+    .icon {
+      color: #f59e0b;
+    }
+  }
+
+  &.error {
+    border-left-color: #ef4444;
+
+    .icon {
+      color: #ef4444;
+    }
+  }
+}
+
+.icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(var(--black));
+}
+
+.message {
+  font-size: 14px;
+  color: rgba(var(--black), 0.7);
+  line-height: 1.5;
+}

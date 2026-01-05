@@ -1,0 +1,90 @@
+@use "@/styles/variables.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  padding: var(--space-lg) 0;
+  height: 100%;
+  width: 260px;
+}
+
+.nav {
+  flex: 1;
+  padding: 0 var(--space-md);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background: rgba(var(--white), 0.1);
+  }
+
+  &Active {
+    background: rgba(var(--white), 0.15);
+    font-weight: 600;
+  }
+}
+
+.menuIcon {
+  font-size: 1.2rem;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuLabel {
+  flex: 1;
+}
+
+.footer {
+  padding: 0 var(--space-md);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(var(--white), 0.1);
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: none;
+  border: none;
+  color: rgba(var(--white), 0.7);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background: rgba(var(--white), 0.1);
+    color: var(--color-text-primary);
+  }
+}

@@ -1,0 +1,48 @@
+@use "@/styles/variables.scss" as *;
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 8px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(var(--white), 0.1);
+  }
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    rgb(var(--steel)) 100%
+  );
+  color: var(--color-text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.role {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}

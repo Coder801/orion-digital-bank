@@ -1,0 +1,52 @@
+@use "sass:list";
+
+/* SCSS Variables */
+/* -------------------------------- */
+
+$header-sizes: (2rem, 1.8rem, 1.6rem, 1.4rem, 1rem, 0.8rem);
+
+/* CSS Variables */
+/* -------------------------------- */
+:root {
+  /* 🎚️ Rhythm & Spacing */
+  --base: 4px;
+  --space-xs: calc(var(--base) * 2);
+  --space-sm: calc(var(--base) * 3);
+  --space-md: calc(var(--base) * 4);
+  --space-lg: calc(var(--base) * 5);
+  --space-xl: calc(var(--base) * 6);
+
+  /* 🎨 Palette */
+  --white: 254, 254, 254;
+  --black: 0, 0, 0;
+  --gray: 85, 85, 85;
+  --blue: 0, 87, 184;
+  --yellow: 255, 215, 0;
+  --light-gray: 211, 211, 211;
+  --navy: 15, 23, 42;
+  --steel: 30, 41, 59;
+  --blue-gray: 51, 65, 85;
+
+  /* 🧩 Semantic Colors */
+  --color-bg-primary: rgb(var(--steel));
+  --color-bg-secondary: rgb(var(--navy));
+  --color-bg-surface: rgb(var(--blue-gray));
+  --color-bg-aside: rgb(var(--blue-gray));
+
+  --color-text-primary: rgb(var(--light-gray));
+  --color-text-secondary: rgba(var(--light-gray), 0.7);
+  --color-text-mark: rgb(var(--white));
+
+  --color-blue: rgb(var(--blue));
+  --color-yellow: rgb(var(--yellow));
+
+  --background-chip-primary: rgba(var(--light-gray), 0.2);
+  --background-chip-secondary: rgba(var(--light-gray), 0.5);
+
+  /* ✍️ Fonts */
+  --font-sans: "Roboto", sans-serif;
+
+  @for $i from 1 through list.length($header-sizes) {
+    --h#{$i}-size: #{list.nth($header-sizes, $i)};
+  }
+}

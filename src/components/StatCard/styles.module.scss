@@ -1,0 +1,42 @@
+@use "@/styles/variables.scss" as *;
+
+.statCard {
+  background: var(--color-bg-surface);
+  padding: var(--space-lg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  box-shadow: 0 2px 8px rgba(var(--black), 0.05);
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--blue), 0.1) 0%,
+    rgba(var(--steel), 0.1) 100%
+  );
+  border-radius: 12px;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}

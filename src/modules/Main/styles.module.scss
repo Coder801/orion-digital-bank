@@ -1,0 +1,184 @@
+@use "@/styles/variables.scss" as *;
+
+.container {
+  position: relative;
+  width: 100%;
+  background-color: rgb(var(--steel));
+  color: var(--color-text-secondary);
+  padding: var(--space-xl);
+  overflow-y: auto;
+  height: 100%;
+}
+
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.notices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.section {
+  background: var(--color-bg-surface);
+  padding: var(--space-lg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(var(--black), 0.05);
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: rgb(var(--white));
+  padding: var(--space-lg);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-height: 200px;
+  box-shadow: 0 8px 24px rgba(var(--black), 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardType {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(var(--white));
+}
+
+.cardChip {
+  font-size: 2rem;
+  color: rgb(var(--white));
+}
+
+.cardNumber {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: auto;
+  color: rgb(var(--white));
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.cardLabel {
+  font-size: 0.75rem;
+  color: rgba(var(--white), 0.8);
+  margin-bottom: var(--space-xs);
+}
+
+.cardBalance,
+.cardExpiry {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(var(--white));
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: 8px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(var(--white), 0.05);
+  }
+}
+
+.transactionIcon {
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--blue), 0.1);
+  border-radius: 50%;
+}
+
+.transactionDetails {
+  flex: 1;
+}
+
+.transactionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.transactionMeta {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.transactionAmount {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.transactionIncome {
+  color: #10b981;
+}
+
+.transactionExpense {
+  color: #ef4444;
+}

@@ -1,0 +1,81 @@
+{
+  "header": {
+    "customer": "Customer",
+    "notifications": "Notifications"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "accounts": "Accounts",
+    "transactions": "Transactions",
+    "cards": "Cards",
+    "payments": "Payments",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back! Here's your financial overview",
+    "totalBalance": "Total Balance",
+    "income": "Income (This Month)",
+    "expenses": "Expenses (This Month)",
+    "myCards": "My Cards",
+    "balance": "Balance",
+    "expiry": "Expiry",
+    "recentTransactions": "Recent Transactions"
+  },
+  "transactions": {
+    "salaryPayment": "Salary Payment",
+    "groceryStore": "Grocery Store",
+    "electricBill": "Electric Bill",
+    "restaurant": "Restaurant",
+    "freelanceProject": "Freelance Project",
+    "gasolineStation": "Gasoline Station",
+    "onlineShopping": "Online Shopping",
+    "gymMembership": "Gym Membership",
+    "coffeeShop": "Coffee Shop",
+    "taxiRide": "Taxi Ride"
+  },
+  "categories": {
+    "salary": "Salary",
+    "shopping": "Shopping",
+    "utilities": "Utilities",
+    "food": "Food",
+    "freelance": "Freelance",
+    "transport": "Transport",
+    "entertainment": "Entertainment",
+    "health": "Health",
+    "education": "Education",
+    "other": "Other"
+  },
+  "cards": {
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "amex": "American Express",
+    "discover": "Discover"
+  },
+  "notices": {
+    "infoTitle": "Information",
+    "infoMessage": "Your account has been successfully verified. You now have access to all features.",
+    "warningTitle": "Warning",
+    "warningMessage": "Your card ending in 4532 will expire soon. Please request a new card.",
+    "errorTitle": "Error",
+    "errorMessage": "Failed to process your last transaction. Please contact support if the issue persists."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "export": "Export",
+    "import": "Import"
+  }
+}

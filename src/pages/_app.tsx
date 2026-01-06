@@ -11,6 +11,7 @@ import { store } from "@/store";
 import { AppProvider } from "@/context/AppContext";
 
 import Home from "./home";
+import Account from "./account";
 
 const roboto = Roboto({
   subsets: ["latin", "cyrillic"],
@@ -22,6 +23,7 @@ const roboto = Roboto({
 function MyApp({ Component, pageProps, router }: AppProps) {
   const routesMap: Record<string, ComponentType> = {
     "/": Home,
+    "/account": Account,
   };
 
   const PageComponent = routesMap[router.pathname] || Component;

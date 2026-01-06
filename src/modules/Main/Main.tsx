@@ -11,6 +11,7 @@ import {
 } from "react-icons/md";
 
 import { Notice } from "@/ui/Notice";
+import { Title } from "@/components/Title";
 import { StatCard } from "@/components/StatCard";
 import styles from "./styles.module.scss";
 
@@ -103,7 +104,7 @@ export const Main: FC<MainProps> = ({ className }) => {
   return (
     <main className={clsx(className, styles.container)}>
       <div className={styles.header}>
-        <h1 className={styles.title}>{t("dashboard.title")}</h1>
+        <Title className={styles.title}>{t("dashboard.title")}</Title>
         <p className={styles.subtitle}>{t("dashboard.welcome")}</p>
       </div>
 
@@ -158,11 +159,15 @@ export const Main: FC<MainProps> = ({ className }) => {
                 <div className={styles.cardNumber}>{card.number}</div>
                 <div className={styles.cardFooter}>
                   <div>
-                    <div className={styles.cardLabel}>{t("dashboard.balance")}</div>
+                    <div className={styles.cardLabel}>
+                      {t("dashboard.balance")}
+                    </div>
                     <div className={styles.cardBalance}>{card.balance}</div>
                   </div>
                   <div>
-                    <div className={styles.cardLabel}>{t("dashboard.expiry")}</div>
+                    <div className={styles.cardLabel}>
+                      {t("dashboard.expiry")}
+                    </div>
                     <div className={styles.cardExpiry}>{card.expiry}</div>
                   </div>
                 </div>
@@ -172,7 +177,9 @@ export const Main: FC<MainProps> = ({ className }) => {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>{t("dashboard.recentTransactions")}</h2>
+          <h2 className={styles.sectionTitle}>
+            {t("dashboard.recentTransactions")}
+          </h2>
           <div className={styles.transactions}>
             {transactions.map((transaction) => (
               <div key={transaction.id} className={styles.transaction}>
@@ -184,7 +191,9 @@ export const Main: FC<MainProps> = ({ className }) => {
                   )}
                 </div>
                 <div className={styles.transactionDetails}>
-                  <div className={styles.transactionTitle}>{transaction.title}</div>
+                  <div className={styles.transactionTitle}>
+                    {transaction.title}
+                  </div>
                   <div className={styles.transactionMeta}>
                     {transaction.category} • {transaction.date}
                   </div>

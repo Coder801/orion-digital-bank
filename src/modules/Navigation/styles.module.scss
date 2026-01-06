@@ -1,30 +1,29 @@
 @use "@/styles/variables.scss" as *;
 
-.container {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-bg-aside);
-  color: var(--color-text-primary);
-  padding: 20px 0;
-  height: 100%;
-  width: 260px;
-  box-shadow: var(--shadow-md);
+.nav {
+  width: 100%;
 }
 
-.navigationWrapper {
-  flex: 1;
+.navigation {
+  list-style: none;
   padding: 0;
-  margin-top: 10px;
+  margin: 0;
+  display: flex;
+  gap: 2px;
+
+  &Vertical {
+    flex-direction: column;
+  }
+
+  &Horizontal {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xs);
+  }
 }
 
-.footer {
-  padding: 0 var(--space-md);
-  margin-top: var(--space-lg);
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--border-color-light);
-}
-
-.logoutButton {
+.navigationItem {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--space-md);
@@ -35,15 +34,23 @@
   color: var(--color-text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 14px;
+  font-size: 0.95rem;
   width: 100%;
   text-align: left;
+  white-space: nowrap;
   font-weight: 400;
 
   &:hover {
     background: rgba(var(--white), 0.08);
     color: var(--color-text-primary);
     border-left-color: rgba(var(--white), 0.2);
+  }
+
+  &.active {
+    background: rgba(var(--blue-primary), 0.15);
+    color: var(--color-text-primary);
+    font-weight: 500;
+    border-left-color: var(--color-primary);
   }
 }
 

@@ -3,28 +3,26 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 12px;
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(
-    135deg,
-    var(--color-blue) 0%,
-    rgb(var(--steel)) 100%
-  );
+  width: 36px;
+  height: 36px;
+  background: var(--color-primary);
   color: var(--color-text-primary);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  box-shadow: var(--shadow-sm);
 }
 
 .text {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--color-text-primary);
+  letter-spacing: 0;
 }

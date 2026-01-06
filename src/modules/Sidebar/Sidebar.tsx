@@ -12,23 +12,18 @@ import {
   MdLogout,
 } from "react-icons/md";
 
+import { Navigation, NavigationItem } from "@/modules/Navigation";
 import styles from "./styles.module.scss";
 
 type SidebarProps = {
   className?: string;
 };
 
-type MenuItem = {
-  id: string;
-  label: string;
-  icon: React.ComponentType<{ className?: string }>;
-};
-
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const { t } = useTranslation();
   const [activeItem, setActiveItem] = useState("dashboard");
 
-  const menuItems: MenuItem[] = [
+  const navigationItems: NavigationItem[] = [
     { id: "dashboard", label: t("sidebar.dashboard"), icon: MdDashboard },
     { id: "accounts", label: t("sidebar.accounts"), icon: MdAccountBalance },
     {
@@ -44,35 +39,21 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 
   return (
     <aside className={clsx(className, styles.container)}>
-      <nav className={styles.nav}>
-        <ul className={styles.menu}>
-          {menuItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <li key={item.id}>
-                <button
-                  className={clsx(styles.menuItem, {
-                    [styles.menuItemActive]: activeItem === item.id,
-                  })}
-                  onClick={() => setActiveItem(item.id)}
-                >
-                  <span className={styles.menuIcon}>
-                    <Icon />
-                  </span>
-                  <span className={styles.menuLabel}>{item.label}</span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
+      <div className={styles.navigationWrapper}>
+        <Navigation
+          items={navigationItems}
+          activeItem={activeItem}
+          onItemClick={setActiveItem}
+          orientation="vertical"
+        />
+      </div>
 
       <div className={styles.footer}>
         <button className={styles.logoutButton}>
-          <span className={styles.menuIcon}>
+          <span className={styles.navigationIcon}>
             <MdLogout />
           </span>
-          <span className={styles.menuLabel}>{t("sidebar.logout")}</span>
+          <span className={styles.navigationLabel}>{t("sidebar.logout")}</span>
         </button>
       </div>
     </aside>

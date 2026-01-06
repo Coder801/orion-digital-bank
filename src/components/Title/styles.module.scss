@@ -12,7 +12,11 @@
   .title {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin: 0 0 6px 0;
+    letter-spacing: 0;
 
     &::after {
       position: absolute;

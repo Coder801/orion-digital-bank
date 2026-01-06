@@ -3,46 +3,46 @@
 .profile {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 12px;
   cursor: pointer;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: 8px;
-  transition: background 0.2s;
+  padding: 6px 12px;
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease;
 
   &:hover {
-    background: rgba(var(--white), 0.1);
+    background: rgba(var(--blue-primary), 0.08);
   }
 }
 
 .avatar {
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(
-    135deg,
-    var(--color-blue) 0%,
-    rgb(var(--steel)) 100%
-  );
+  width: 38px;
+  height: 38px;
+  background: var(--color-primary);
   color: var(--color-text-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .name {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
+  line-height: 1.2;
 }
 
 .role {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-text-secondary);
+  line-height: 1.2;
 }
